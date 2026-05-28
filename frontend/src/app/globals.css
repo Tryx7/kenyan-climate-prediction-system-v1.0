@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 15, 23, 42;
+  --background-end-rgb: 15, 23, 42;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.climate-card {
+  @apply bg-climate-card rounded-xl border border-slate-700 p-6 shadow-lg;
+}
+
+.climate-gradient {
+  background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+}
+
+.risk-high { @apply text-red-400 bg-red-400/10 border-red-400/20; }
+.risk-medium { @apply text-yellow-400 bg-yellow-400/10 border-yellow-400/20; }
+.risk-low { @apply text-green-400 bg-green-400/10 border-green-400/20; }
